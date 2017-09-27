@@ -4,6 +4,8 @@ import React from 'react';
 import Tabs from './Tabs';
 import Tab from './Tab';
 
+// Tabs stylize can be 'original', 'material' or 'flat'
+
 const App = (props: Object) => (
   <Tabs stylize="original" selected={0}>
     <Tab label="React">React is really awesome</Tab>
