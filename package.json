@@ -26,6 +26,7 @@
     "react-router-dom": "4.1.1",
     "redux": "3.6.0",
     "redux-thunk": "2.2.0",
+    "siema": "^1.4.6",
     "styled-components": "2.0.0",
     "webpack": "2.6.1",
     "webpack-dev-middleware": "1.10.2",
