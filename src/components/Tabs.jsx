@@ -7,11 +7,15 @@ export default class Tabs extends Component {
 
   state: {
       selected: number;
+      labelsClass: string;
+      labelClass: string,
+      activeClass: string,
   };
 
   onLabelClick: Function;
   labels: Function;
-
+  changeStyle: Function;
+  setupSlider: Function;
 
   constructor(props: any) {
     super(props);
@@ -25,9 +29,13 @@ export default class Tabs extends Component {
 
     this.labels = this.labels.bind(this);
     this.onLabelClick = this.onLabelClick.bind(this);
-    this.changeStyle = this.changeStyle.bind(this);
-    this.setupSlider = this.setupSlider.bind(this);
   }
+
+  componentDidMount() {
+    this.setupSlider();
+    this.changeStyle();
+  }
+
 
   onLabelClick(index: number) {
     this.setState({
@@ -35,23 +43,20 @@ export default class Tabs extends Component {
     });
   }
 
-  componentDidMount() {
-    this.changeStyle();
-    this.setupSlider();
-  }
-
   setupSlider() {
-    if (this.props.children.length > 15) {
+    const slideAfter = window.matchMedia(`(max-width: ${this.props.slideAfter}px)`).matches;
+
+    if (this.props.children.length >= this.props.slideIf || slideAfter) {
       new Siema({
         selector: '.tabs__labels__slider',
         duration: 200,
         easing: 'ease-out',
         perPage: {
-          320: 3,
-          460: 4,
-          620: 6,
-          800: 8,
-          1240: 11,
+          [320]: 3,
+          [460]: 4,
+          [620]: 6,
+          [800]: 8,
+          [1240]: 11,
         },
         startIndex: 0,
         draggable: true,
@@ -84,11 +89,15 @@ export default class Tabs extends Component {
           activeClass: 'material__is-active',
         }); break;
 
-      default: console.log('nothing is customize');
+      default: this.setState({
+        labelClass: '',
+        labelsClass: '',
+        activeClass: '',
+      }); break;
     }
   }
 
-  labels(child: any, index: number) {
+  labels(child: Object, index: number) {
     const onClick = this.onLabelClick.bind(this, index);
     const activeClass = (this.state.selected === index ? this.state.activeClass : '');
     return (
@@ -104,7 +113,7 @@ export default class Tabs extends Component {
     return (
       <div className="tabs">
         <ul className={`${this.state.labelsClass} tabs__labels__slider`}>
-          {this.props.children.map(this.labels)}
+          {React.Children.map(this.props.children, this.labels)}
         </ul>
         <div className="tabs__content">
           {this.props.children[this.state.selected]}
