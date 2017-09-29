@@ -1,6 +1,7 @@
 // @flow
 
 import React, { Component } from 'react';
+
 import Siema from 'siema';
 
 export default class Tabs extends Component {

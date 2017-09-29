@@ -21,6 +21,8 @@ test('Tabs correctly understand stylize', () => {
     </Tabs>,
     );
   expect(tabs.find('ul').hasClass('material__tabs__labels')).toEqual(true);
+  expect(tabs.find('ul').hasClass('flat__tabs__labels')).toEqual(false);
+  expect(tabs.find('ul').hasClass('original__tabs__labels')).toEqual(false);
 });
 
 
