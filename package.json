@@ -1,12 +1,10 @@
 {
   "scripts": {
-    "commit": "git-cz",
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "lint": "node_modules/.bin/esw src/**/*.{js,jsx}; exit 0",
     "test": "jest",
-    "test-coverage": "jest --coverage",
-    "semantic-release": "semantic-release pre && npm publish"
+    "test-coverage": "jest --coverage"
   },
   "peerDependencies": {
     "react": "^15.5.4"
@@ -31,8 +29,6 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "commitizen": "2.9.6",
-    "cz-conventional-changelog": "2.1.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^3.19.0",
@@ -50,7 +46,6 @@
     "jest-enzyme": "^6.0.0",
     "react-hot-loader": "3.0.0-beta.6",
     "react-test-renderer": "^15.5.4",
-    "semantic-release": "^15.1.4",
     "webpack": "^4.2.0",
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^3.1.1"
@@ -78,9 +73,5 @@
     "react-tabs",
     "tabs"
   ],
-  "author": {
-    "name": "Bogdan Taranenko",
-    "email": "bogdan13taranenko@gmail.com"
-  },
   "license": "ISC"
 }
