@@ -4,15 +4,14 @@
     "build": "webpack --mode production",
     "lint": "node_modules/.bin/esw src/**/*.{js,jsx}; exit 0",
     "test": "jest",
-    "test-coverage": "jest --coverage"
+    "test-coverage": "jest --coverage",
+    "build:commonjs": "cross-env BABEL_OUTPUT=commonjs babel src/ --out-dir lib/ --ignore **/__tests__,**/__mocks__"
   },
   "peerDependencies": {
     "react": "^15.5.4"
   },
   "dependencies": {
-    "prop-types": "^15.6.1",
-    "react": "^16.3.0",
-    "react-dom": "^16.3.0"
+    "prop-types": "^15.6.1"
   },
   "jest": {
     "testEnvironment": "enzyme",
@@ -48,6 +47,8 @@
     "react-test-renderer": "^15.5.4",
     "webpack": "^4.2.0",
     "webpack-cli": "^2.0.12",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
     "webpack-dev-server": "^3.1.1"
   },
   "babel": {
@@ -57,13 +58,10 @@
       "stage-2"
     ]
   },
-  "czConfig": {
-    "path": "node_modules/cz-conventional-changelog"
-  },
   "name": "sn-react-tabs",
   "version": "0.0.0-development",
   "description": "Extremely simple and flexible tabs",
-  "main": "src/index.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/starnavi-team/sn-react-tabs"
@@ -72,6 +70,10 @@
     "react",
     "react-tabs",
     "tabs"
+  ],
+  "files": [
+    "src",
+    "index.js"
   ],
   "license": "ISC"
 }
