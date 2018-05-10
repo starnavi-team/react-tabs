@@ -53,15 +53,8 @@
     "react-dom": "^16.3.0",
     "webpack-dev-server": "^3.1.1"
   },
-  "babel": {
-    "presets": [
-      "env",
-      "react",
-      "stage-2"
-    ]
-  },
   "name": "sn-react-tabs",
-  "version": "0.0.2-development",
+  "version": "0.0.3",
   "description": "Extremely simple and flexible tabs",
   "main": "./dist/index.js",
   "repository": {
