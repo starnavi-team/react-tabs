@@ -5,7 +5,7 @@ class TabList extends Component {
   static contextTypes = {
     activeIndex: PropTypes.number.isRequired,
     onSelectTab: PropTypes.func.isRequired,
-  }
+  };
 
   render() {
     const { activeIndex } = this.context;

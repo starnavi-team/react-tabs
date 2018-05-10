@@ -1,13 +1,13 @@
+const path = require('path');
+
 module.exports = {
-  entry: [
-    './src/index.js',
-  ],
+  entry: './src/index.js',
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
         use: ['babel-loader'],
+        exclude: /node_modules/,
       },
     ],
   },
@@ -17,7 +17,10 @@ module.exports = {
   output: {
     path: `${__dirname}/dist`,
     publicPath: '/',
-    filename: 'bundle.js',
+    filename: 'index.js',
+    library: 'sn-react-tabs',
+    libraryTarget: 'umd',
+    umdNamedDefine: true,
   },
   devServer: {
     contentBase: './dist',

@@ -5,7 +5,7 @@ class Tabs extends Component {
   static childContextTypes = {
     activeIndex: PropTypes.number.isRequired,
     onSelectTab: PropTypes.func.isRequired,
-  }
+  };
 
   state = {
     activeIndex: this.props.defaultIndex || 0 ,
@@ -21,7 +21,7 @@ class Tabs extends Component {
   selectTabIndex = (activeIndex) => {
       this.setState({ activeIndex });
       this.props.onChangeIndex && this.props.onChangeIndex(activeIndex);
-  }
+  };
 
   render() {
     return (

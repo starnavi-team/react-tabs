@@ -2,13 +2,15 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
+    "webpack-errors": "webpack --display-error-details",
     "lint": "node_modules/.bin/esw src/**/*.{js,jsx}; exit 0",
     "test": "jest",
     "test-coverage": "jest --coverage",
-    "build:commonjs": "cross-env BABEL_OUTPUT=commonjs babel src/ --out-dir lib/ --ignore **/__tests__,**/__mocks__"
+    "prepublish": "rm -rf ./dist && npm run build"
   },
   "peerDependencies": {
-    "react": "^15.5.4"
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0"
   },
   "dependencies": {
     "prop-types": "^15.6.1"
@@ -59,9 +61,9 @@
     ]
   },
   "name": "sn-react-tabs",
-  "version": "0.0.0-development",
+  "version": "0.0.2-development",
   "description": "Extremely simple and flexible tabs",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/starnavi-team/sn-react-tabs"
@@ -72,6 +74,7 @@
     "tabs"
   ],
   "files": [
+    "dist",
     "src",
     "index.js"
   ],
