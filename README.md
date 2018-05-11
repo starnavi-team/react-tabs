@@ -1,21 +1,21 @@
-# sn-react-tabs
+# react-tabs
 Extremely simple and flexible tabs
 
 ## Installing
 
 ```bash
-npm i @starnavi/sn-react-tabs
+npm i @starnavi/react-tabs
 ```
 or
 
 ```bash
-yarn add @starnavi/sn-react-tabs
+yarn add @starnavi/react-tabs
 ```
 
 ## Basic Example
 
 ```js
-import { Tab, Tabs, TabList, TabPanels, TabPanel } from '@starnavi/sn-react-tabs';
+import { Tab, Tabs, TabList, TabPanels, TabPanel } from '@starnavi/react-tabs';
 
 export default () => (
   <Tabs>
@@ -139,4 +139,4 @@ You can use any React components or html markup inside `<TabPanel />`
 
 ## Styling
 
-sn-react-tabs does not include any style loading by default. Default stylesheets are provided and can be included in your application if desired.
+react-tabs does not include any style loading by default. Default stylesheets are provided and can be included in your application if desired.
