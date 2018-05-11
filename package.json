@@ -2,7 +2,6 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
-    "webpack-errors": "webpack --display-error-details",
     "lint": "node_modules/.bin/esw src/**/*.{js,jsx}; exit 0",
     "test": "jest",
     "test-coverage": "jest --coverage",
