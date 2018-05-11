@@ -53,8 +53,8 @@
     "react-dom": "^16.3.0",
     "webpack-dev-server": "^3.1.1"
   },
-  "name": "sn-react-tabs",
-  "version": "0.0.3",
+  "name": "@starnavi/sn-react-tabs",
+  "version": "0.0.0",
   "description": "Extremely simple and flexible tabs",
   "main": "./dist/index.js",
   "repository": {
