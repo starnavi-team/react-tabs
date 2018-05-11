@@ -68,8 +68,7 @@
   ],
   "files": [
     "dist",
-    "src",
-    "index.js"
+    "src"
   ],
   "license": "ISC"
 }
