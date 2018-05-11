@@ -53,7 +53,7 @@
     "webpack-dev-server": "^3.1.1"
   },
   "name": "@starnavi/react-tabs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Extremely simple and flexible tabs",
   "main": "./dist/index.js",
   "repository": {
