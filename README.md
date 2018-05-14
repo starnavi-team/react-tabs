@@ -53,7 +53,7 @@ Provide a custom class name for the outer `<div />` of the tabs.
 
 Provide a custom inline styles.
 
-#### onSelect: `(index: number) => {  }`
+#### onChangeIndex: `(index: number) => {  }`
 
 This event handler is called every time a tab is about to change. It will be called with the `index` that it will be changed to.
 
